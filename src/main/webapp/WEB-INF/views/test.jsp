@@ -66,7 +66,7 @@
 
 <div class="container">
 <div class="panel panel-default">
-  <div class="panel-heading">Food List</div>
+  <div class="panel-heading">음식 목록</div>
   <div class="panel-body">
 <div class="row">
   <div class="col-sm-6 col-md-3">
