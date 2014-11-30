@@ -10,8 +10,8 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-import net.food.manager.dao.FoodDao;
-import net.food.manager.dao.impl.FoodDaoImpl;
+
+import net.food.manager.service.FoodService;
 import net.food.manager.vo.Food;
 
 import org.slf4j.Logger;
@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	@Inject
-	private FoodDaoImpl foodDaoImpl;
+	private FoodService foodService;
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
@@ -53,7 +53,7 @@ public class HomeController {
 	@RequestMapping("/test")
 	public String test(Model model) throws Exception {
 
-		List<Food> foodList = foodDaoImpl.getList(new HashMap<String,String>());       
+		List<Food> foodList = foodService.getList(new HashMap<String,String>());       
 
 		model.addAttribute("hello", foodList);
           
